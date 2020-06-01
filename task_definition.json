@@ -1,0 +1,18 @@
+{
+    "family": "WebApp",
+    "containerDefinitions": [
+        {
+            "image": "URI:NUMBER",
+            "name": "WebAppPod",
+            "cpu": 0,
+            "memory": 128,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080
+                }
+            ]
+        }
+    ]
+}
