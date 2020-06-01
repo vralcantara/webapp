@@ -13,11 +13,11 @@ pipeline {
         sh "./build.sh -b ${env.BUILD_ID} -n ${params.REPONAME} -e ${params.ECR} -r ${params.REGION}"
       }
     }
-    //stage('DeployStage') {
-    //  steps {
-    //    sh "./deploy.sh -b ${env.BUILD_ID} -e ${params.ECR} -c ${params.CLUSTER} -t ${params.TASK}"
-    //  }
-    //}
+    stage('DeployStage') {
+      steps {
+        sh "./deploy.sh -b ${env.BUILD_ID} -e ${params.ECR} -c ${params.CLUSTER} -t ${params.TASK}"
+      }
+    }
     stage('TestStage') {
       steps {
         sh "./test.sh"
