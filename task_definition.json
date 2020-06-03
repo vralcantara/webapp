@@ -1,9 +1,9 @@
 {
-    "family": "WebApp",
+    "family": "NOME_DA_TASK_DEFINITION",
     "containerDefinitions": [
         {
             "image": "URI:NUMBER",
-            "name": "WebAppPod",
+            "name": "NOME_DO_CONTAINER",
             "cpu": 0,
             "memory": 128,
             "essential": true,
